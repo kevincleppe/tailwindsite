@@ -80,6 +80,7 @@ a:link{
 }
 a:hover{
   color: #341539;
+  text-decoration: none;
 }
 
 /**

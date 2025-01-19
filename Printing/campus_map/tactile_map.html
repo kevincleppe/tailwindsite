@@ -27,93 +27,71 @@
 
       <div class="text-center lg:w-2/3 w-full">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Tactile Campus Map </h1>
-        <p class=" leading-relaxed text-left"> In 2022, I presented at the CSUN Assistive Technology Conference on how to make customized tactile maps.</p>
-        
-        <a href="https://www.youtube.com/watch?v=rkmGBfkbOfs">
-            <p class=" leading-relaxed text-left"> I'll cut to the chase and share the link to the video showing how to make this here, and I'll have it embedded below:</p>
+        <p class="leading-relaxed text-left py-1.5"> In 2022, I presented at the CSUN Assistive Technology Conference on how to make customized tactile maps.
+        <a href="https://www.youtube.com/watch?v=rkmGBfkbOfs">I'll cut to the chase and share the link to the video showing how to make this here, and I'll have it embedded below:</p>
         </a> 
         <div class="flex justify-center">
             <iframe class="py-4" width="560" height="315" src="https://www.youtube.com/embed/rkmGBfkbOfs?si=2CLvTfAIDM_UWbu5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <p class=" leading-relaxed text-left"><a href="https://docs.google.com/presentation/d/1LX0Rs5rWiSOmph_7fwGs_zQKhYCLLb-w/edit?usp=drive_link&ouid=114970346001655779410&rtpof=true&sd=true">I also have alink here to the power point used in the video above.</a></p>
-        <br><br>
-        <p class=" leading-relaxed text-left">If you're looking for more of a written guide though, I have the steps below!</p>
-        <br><br>
-        <p class=" leading-relaxed text-left">First thing's first, go to <a href="https://touch-mapper.org/en/">Touch Mapper</a>, and type in the location you want to get a 3D model of:</p>
+        <p class=" leading-relaxed text-left"><a href="https://docs.google.com/presentation/d/1LX0Rs5rWiSOmph_7fwGs_zQKhYCLLb-w/edit?usp=drive_link&ouid=114970346001655779410&rtpof=true&sd=true">I also have alink here to the power point used in the video above.</a> If you're looking for more of a written guide though, I have the steps below! First thing's first, go to <a href="https://touch-mapper.org/en/">Touch Mapper</a>, and type in the location you want to get a 3D model of:</p>
             <div class="flex justify-center">
-                <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Touch Mapper Home Screen, a pair of hands is feeling a tactile map." src="https://tailwindsite.blob.core.windows.net/public/touchmappersearch.png">
+                <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto " alt="Touch Mapper Home Screen, a pair of hands is feeling a tactile map." src="https://tailwindsite.blob.core.windows.net/public/touchmappersearch.png">
             </div>
-            
-<br><br>
-<p class=" leading-relaxed text-left">In the search bar, type in a location you're interested in. If you haven't already, also be sure to ask your user what locations they particularly had in mind. Touch Mapper can get very, very granular, so if your user had a specific place in mind, be sure to ask ahead of time!</p>
-<br><br>
+<p class=" leading-relaxed text-left py-5">In the search bar, type in a location you're interested in. If you haven't already, also be sure to ask your user what locations they particularly had in mind. Touch Mapper can get very, very granular, so if your user had a specific place in mind, be sure to ask ahead of time!</p>
 
       </div>
       <div class="flex justify-center">
         <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Touch Mapper with CSUSB in the center." src="https://tailwindsite.blob.core.windows.net/public/touchmapperlocation.png">
-        
     </div>
-    <br><br>
-    <p class=" leading-relaxed text-left">Once you've got the location centered, click on the "Create Tactile Map" button. This will start the process of creating an STL model that we can then edit in Blender. Fun fact, my office is in the pointy in of "The Wedge." </p>
-    <br>
+    <p class=" leading-relaxed text-left py-5">Once you've got the location centered, click on the "Create Tactile Map" button. This will start the process of creating an STL model that we can then edit in Blender. Fun fact, my office is in the pointy in of "The Wedge." </p>
+  
     <div class="flex justify-center">
         <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="3D model of the CSUSB campus." src="https://tailwindsite.blob.core.windows.net/public/stl.png">
     </div>
-    <br>
-    
-    <br>
-    <br>
-    <p class=" leading-relaxed text-left">Now, open up blender (it's free!), and import the STL into the program. Blender is really, REALLY confusing the first time you open it (and also the hundredth time), but we will only be using a few things in it for now. First, open the file menu, come down to the import option, select STL, and then look for the STL file you made in the previous step.</p>
+   
+    <p class=" leading-relaxed text-left py-5">Now, open up blender (it's free!), and import the STL into the program. Blender is really, REALLY confusing the first time you open it (and also the hundredth time), but we will only be using a few things in it for now. First, open the file menu, come down to the import option, select STL, and then look for the STL file you made in the previous step.</p>
 
     <div class="flex justify-center">
       <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender interface. First open the file menu, then the import option, then the stl option, and import the stl file you just made" src="https://tailwindsite.blob.core.windows.net/public/blendermenus.png">
   </div>
-  <br><br>
-  <p class=" leading-relaxed text-left">Ok, this next part is the most technical part. It's a bit hard to explain, <a href="https://youtu.be/rkmGBfkbOfs?feature=shared&t=1256">so I have this technical part from the video linked here.</a> Basically, you want to remove the unecessary parts of the model. This is also where you need to talk to your user. Do they want the whole campus, including the parking lots? Or do they just want the buildings and path ways on campus? For my user they JUST wanted the main part of the campus. So, we need to edit this. 
-<br><br>
-So first, delete the default cube, then select the STL model you imported. From there, hit tab, which will take take you into "Edit Mode" for blender. The once previously solid grey model will now have a bunch of little dots over it. These are the "vertices" for the model, and what you can individually edit on the model. There's a LOT you can do with these, but for right now, we are going to be using the lasso tool to select the parts of the model we want to delete. </p>
+  
+  <p class=" leading-relaxed text-left py-5">Ok, this next part is the most technical part. It's a bit hard to explain, <a href="https://youtu.be/rkmGBfkbOfs?feature=shared&t=1256">so I have this technical part from the video linked here.</a> Basically, you want to remove the unecessary parts of the model. This is also where you need to talk to your user. Do they want the whole campus, including the parking lots? Or do they just want the buildings and path ways on campus? For my user they JUST wanted the main part of the campus. So, we need to edit this. So first, delete the default cube, then select the STL model you imported. From there, hit tab, which will take take you into "Edit Mode" for blender. The once previously solid grey model will now have a bunch of little dots over it. These are the "vertices" for the model, and what you can individually edit on the model. There's a LOT you can do with these, but for right now, we are going to be using the lasso tool to select the parts of the model we want to delete. </p>
 <div class="flex justify-center">
   <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode. There are not a lot of black dots on the model" src="https://tailwindsite.blob.core.windows.net/public/blendereditmode.png">
 </div>
-<br><br>
-<p class=" leading-relaxed text-left">
+<p class=" leading-relaxed text-left py-5">
   Now in edit mode, click on the far left "globe" icon. This will change the view of the model to "wireframe" mode. This will make it easier to see the individual vertices of the model, and also make it easier to perform the editing we need to do.
-  <br><br>
   <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object." src="https://tailwindsite.blob.core.windows.net/public/Screenshot 2025-01-18 170154.png">  
-<br>
-  Now, we want to change our view to a top down mode to more easily select the parts of the model we want to delete. To do this, press the "`" key, which is the key to the left of the "1" key on your keyboard. Then select the "top" view.
-<br><br>
-  <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object. We are now looking from the top down on the model." src="https://tailwindsite.blob.core.windows.net/public/viewselect.png">  
-<br><br>
-Now we get to use the lasso tool! Press Ctrl, and hold down right click. Use this to select the area of the model you want to keep. For me, I want to keep just the center area of the campus. No parking lots for me.
+  <p class=" leading-relaxed text-left py-5">Now, we want to change our view to a top down mode to more easily select the parts of the model we want to delete. To do this, press the "`" key, which is the key to the left of the "1" key on your keyboard. Then select the "top" view.
+  </p>
 
-<br><br>
+  <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object. We are now looking from the top down on the model." src="https://tailwindsite.blob.core.windows.net/public/viewselect.png">  
+
+  <p class=" leading-relaxed text-left py-5">Now we get to use the lasso tool! Press Ctrl, and hold down right click. Use this to select the area of the model you want to keep. For me, I want to keep just the center area of the campus. No parking lots for me.</p>
+
 <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object. We are now looking from the top down on the model, and have the the center of the campus highlighted." src="https://tailwindsite.blob.core.windows.net/public/lasso.png"> 
 
-<br><br>
+
 <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object. We are now looking from the top down on the model, and have the the center of the campus selected." src="https://tailwindsite.blob.core.windows.net/public/lassoslected.png"> 
 
-<br><br>
+<p class=" leading-relaxed text-left py-5">Now, the magic part. Press Ctrl + I to invert the selection, then press the delete button, then select the vertices.</p>
 
-Now, the magic part. Press Ctrl + I to invert the selection, then press the delete button, then select the vertices.
-<br><br>
 <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object. We are now looking from the top down on the model, and have the the center of the campus selected." src="https://tailwindsite.blob.core.windows.net/public/verticesdeleted.png"> 
-<br><br>
 
-Now we have the area of the campus we want to keep! Save, and then export this as an STL file.
-<br><br>
+<p class=" leading-relaxed text-left py-5">Now we have the area of the campus we want to keep! Save, and then export this as an STL file.</p>
+
 <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object. We are now looking from the top down on the model, and have the the center of the campus selected." src="https://tailwindsite.blob.core.windows.net/public/deletedexportstl.png"> 
-<br><br>
-We can close blender now. Next, open of your favorite browser, and head to <a href="https://www.tinkercad.com/">Tinkercad.com.</a> This may be the actually best service I've ever come across by the way. It's a 100% online 3D modeling platform with either unlimited storage, or really really high storage. Seriously, I have like 300+ projects in it and I've yet to hit a data cap. AND the platform is very intuitive, but powerful. Tinkercad, if you ever read this, you guys seriously need to let me give you money somehow. So go to Tinkercad.com, create an account, and click the create button, and then click "3D Design".
-<br><br>
-<img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="The main dashboard for tinkercad.com. The create button is circled." src="https://tailwindsite.blob.core.windows.net/public/tinkercad.png"> 
-<br><br>
-Next, once you're in the Tinkercad workspace, click the import button, and look for the STL file you just made in Blender.
-<br><br>
-<img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="The main dashboard for tinkercad.com. The create button is circled." src="https://tailwindsite.blob.core.windows.net/public/tinkerimport3.png"> 
-<br><br>
-We can finally do some editing. First, we need to give the map a base plate, otherwise if we printed this out as is it would fall apart. Go to the shape section, drag a box onto the workspace, and "squish" it down until it matches the shape of the map. <a href="https://youtu.be/rkmGBfkbOfs?si=3sD1YJ4FVkX3egzv&t=1799">I have the part of the video that shows how to do this linked here. </a>
 
+<p class=" leading-relaxed text-left py-5">We can close blender now. Next, open of your favorite browser, and head to <a href="https://www.tinkercad.com/">Tinkercad.com.</a>This may be the actually best service I've ever come across by the way. It's a 100% online 3D modeling platform with either unlimited storage, or really really high storage. Seriously, I have like 300+ projects in it and I've yet to hit a data cap. AND the platform is very intuitive, but powerful. Tinkercad, if you ever read this, you guys seriously need to let me give you money somehow. So go to Tinkercad.com, create an account, and click the create button, and then click "3D Design".</p>
+
+<img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="The main dashboard for tinkercad.com. The create button is circled." src="https://tailwindsite.blob.core.windows.net/public/tinkercad.png"> 
+
+<p class=" leading-relaxed text-left py-5">Next, once you're in the Tinkercad workspace, click the import button, and look for the STL file you just made in Blender.</p>
+
+<img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="The main dashboard for tinkercad.com. The create button is circled." src="https://tailwindsite.blob.core.windows.net/public/tinkerimport3.png"> 
+<p class=" leading-relaxed text-left py-5">We can finally do some editing. First, we need to give the map a base plate, otherwise if we printed this out as is it would fall apart. Go to the shape section, drag a box onto the workspace, and "squish" it down until it matches the shape of the map. <a href="https://youtu.be/rkmGBfkbOfs?si=3sD1YJ4FVkX3egzv&t=1799">I have the part of the video that shows how to do this linked here. </a></p>
+
+<img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="The map we made before, but now with a base plate added." src="https://tailwindsite.blob.core.windows.net/public/baseplateadded.png"> 
 </p>
 </body>
   </main>

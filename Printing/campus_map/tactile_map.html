@@ -35,6 +35,8 @@
         <div class="flex justify-center">
             <iframe class="py-4" width="560" height="315" src="https://www.youtube.com/embed/rkmGBfkbOfs?si=2CLvTfAIDM_UWbu5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <p class=" leading-relaxed text-left"><a href="https://docs.google.com/presentation/d/1LX0Rs5rWiSOmph_7fwGs_zQKhYCLLb-w/edit?usp=drive_link&ouid=114970346001655779410&rtpof=true&sd=true">I also have alink here to the power point used in the video above.</a></p>
+        <br><br>
         <p class=" leading-relaxed text-left">If you're looking for more of a written guide though, I have the steps below!</p>
         <br><br>
         <p class=" leading-relaxed text-left">First thing's first, go to <a href="https://touch-mapper.org/en/">Touch Mapper</a>, and type in the location you want to get a 3D model of:</p>
@@ -61,10 +63,29 @@
     <p class=" leading-relaxed text-left">Once you've the location centered, click on the "Create Tactile Map" button. This will start the process of creating an STL model that we can then edit in Blender. Fun fact, my office is in the pointy end of "The Wedge." </p>
     <br>
     <br>
-    <p class=" leading-relaxed text-left">Now, open up blender (it's free!), and import the STL into the program. Blender is really, REALLY confusing the first time you open it (and also the hundredth time), but we will only be using a few things in it for now.</p>
-  </section>
-  
+    <p class=" leading-relaxed text-left">Now, open up blender (it's free!), and import the STL into the program. Blender is really, REALLY confusing the first time you open it (and also the hundredth time), but we will only be using a few things in it for now. First, open the file menu, come down to the import option, select STL, and then look for the STL file you made in the previous step.</p>
 
+    <div class="flex justify-center">
+      <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender interface. First open the file menu, then the import option, then the stl option, and import the stl file you just made" src="https://tailwindsite.blob.core.windows.net/public/blendermenus.png">
+  </div>
+  <br><br>
+  <p class=" leading-relaxed text-left">Ok, this next part is the most technical part. It's a bit hard to explain,<a href="https://youtu.be/rkmGBfkbOfs?feature=shared&t=1256">so I have this technical part from the video linked here.</a> Basically, you want to remove the unecessary parts of the model. This is also where you need to talk to your user. Do they want the whole campus, including the parking lots? Or do they just want the buildings and path ways on campus? For my user they JUST wanted the main part of the campus. So, we need to edit this. 
+<br><br>
+So first, delete the default cube, then select the STL model you imported. From there, hit tab, which will take take you into "Edit Mode" for blender. The once previously solid grey model will now have a bunch of little dots over it. These are the "vertices" for the model, and what you can individually edit on the model. There's a LOT you can do with these, but for right now, we are going to be using the lasso tool to select the parts of the model we want to delete. </p>
+<div class="flex justify-center">
+  <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode. There are not a lot of black dots on the model" src="https://tailwindsite.blob.core.windows.net/public/blendereditmode.png">
+</div>
+<br><br>
+<p class=" leading-relaxed text-left">
+  Now in edit mode, click on the far left "globe" icon. This will change the view of the model to "wireframe" mode. This will make it easier to see the individual vertices of the model, and also make it easier to perform the editing we need to do.
+  <br><br>
+  <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object." src="https://tailwindsite.blob.core.windows.net/public/Screenshot 2025-01-18 170154.png">  
+<br>
+  Now, we want to change our view to a top down mode to more easily select the parts of the model we want to delete. To do this, press the "`" key, which is the key to the left of the "1" key on your keyboard. Then select the "top" view.
+<br><br>
+  <img class="object-cover object-center rounded items-center justify-center flex-col mx-auto" alt="Blender edit mode, now in wire frame mode. We can see all the vertices of the object. We are now looking from the top down on the model." src="https://tailwindsite.blob.core.windows.net/public/viewselect.png">  
+<br><br>
+</p>
 </body>
   </main>
 <footer class="text-gray-700 body-font">

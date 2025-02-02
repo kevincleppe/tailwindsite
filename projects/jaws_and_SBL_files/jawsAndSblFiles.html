@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Cleppe Home Page </title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<header class="text-black body-font  shadow-lg ml-4 mr-4 mt-2 rounded-md">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a  a href="https://www.kevincleppe.com/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" a href="#">
+        <img src="../../img/download.png" alt="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-md" viewBox="0 0 24 24">
+        </svg>
+        <span class="ml-3 text-xl">kevincleppe.com</span>
+      </a>
+      <nav class="hidden sm:mr-auto sm:ml-4 sm:py-1 sm:pl-4 sm:border-l sm:border-gray-400 sm:flex sm:flex-wrap sm:items-center sm:text-base sm:justify-center">
+        
+        <a class="mr-5 transform motion-reduce:transform-none" href="resume/resume.html">Resume </a>
+      </nav>
+      
+    </div>
+  </header>
+  <main>
+  <section class="text-gray-900 body-font ">
+    <div class="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">JAWS and SBL Files</h1>
+        <p class=" leading-relaxed text-left">
+            Like the tactile map write up, I'll cut to the chase and post the video here on how to modify JAWS SBL files:
+        </p>
+        <div class="flex justify-center">
+            
+            <iframe width="560" height="315" 
+             src="https://www.youtube.com/embed/ZMNBWCdLofU?si=bK6LW6_Px8EgAts2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class=" leading-relaxed text-left py-5">
+            JAWS is a program that, while it has its fair share of critques (Freedom Scientific can we please get some better voices for this), it is actually an incredibly designed program. What the engineers have done to make it work across as many platforms, browsers, and document types is genuinely a technological miracle. I STILL wish the voices were a bit better, but for now I will give credit where credit is due.
+        </p>
+        <p class=" leading-relaxed text-left py-5">
+            All that being said, JAWS still comes up short in a few area. And those areas usually involve unrecognized symbols. JAWS can only recognize so many symbols, so what do you do if there are new symbols that are created that were not included in the origianl JAWS symbol library? Should the JAWS engineers be expected to update the symbol library every time a new symbol is created? My opinion is yes, but I also understand that this is not a realistic expectation. So what do you do if you have a new symbol that JAWS does not recognize? You can modify the SBL file.
+        </p>
+        <p class=" leading-relaxed text-left py-5">
+            In this particular scenario, we had a student who was taking an English class that talked about International Phonetics Alphabet (IPA) symbols. Not only is this subject matter hard, but what really makes this stuff fun is the fact that <u>IPA symbols do not always have a name associated with them.</u> Instead, they are mean to represent a sound. This is done so linquistic experts can have a universal way to represent sounds, regardless of the language they are studying. While this is great if you are a linguistic expert, if you are taking an introductory English class that has IPA symbols as a subject mattter, AND you are using a screen reader that cannot recognize these symbols, it makes this an impossible task. 
+        </p>
+        <p class=" leading-relaxed text-left py-5">
+            <a href="https://www.ruf.rice.edu/~reng/jaws-ipa.html">Let me go ahead and link the article that the video above is based on, and that my student assistant found for me.</a> In short, you need to go into the JAWS files, find the voice file for the voice that your user likes to use the most, and add in the hex values for it that tell JAWS how to pronounce the symbol. The symbols all have a hex value associated with them, so when the screen reaer comes across the symbol, they refer to the symbols that are in the SBL file. If the hex value is there, it will read whatever you put in the file. If it is not there, it will skip over it.
+        </p>
+        <p class=" leading-relaxed text-left py-5"> 
+            The obvious question that still remains is "if these symbols dont have a name associated with them, how is associating the symbol and the hex value with the name going to help?" And you got me there. I don't know if this is the 100% best way to solve this issue, but for my particular user in this particular course, if was the perfect answer. They took the class, knew all the symbols, and aced the class and final. 
+        </p>
+            </div>
+      </div>
+    </div>
+  </section>
+  
+
+</body>
+  </main>
+<footer class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a  a href="https://www.kevincleppe.com/" class="flex title-font font-medium items-center md:justify-start justify-between text-gray-900">
+      <img src="../../img/download.png" alt="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-md" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">kevincleppe.com</span>
+    </a>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start" >
+      <a class="text-gray-900  visually-hidden" href="https://www.facebook.com/cleppekevin" >
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+        <span class="sr-only"> Kevin Cleppe Facebook link</span>
+      </a>
+      <a class="ml-3 text-gray-900" href="https://twitter.com/cleppster">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+        <span class="sr-only"> Kevin Cleppe Twitter link</span>
+      </a>
+      <a class="ml-3 text-gray-900" href="https://www.instagram.com/cleppster/">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+        <span class="sr-only"> Kevin Cleppe Instagram link</span>
+      </a>
+      <a class="ml-3 text-gray-900 hover:underline" href="https://www.linkedin.com/in/kevincleppe/">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"  >
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" ></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+        <span class="sr-only"> Kevin Cleppe Linkedin link</span>
+      </a>
+      
+    </span>
+    
+  </div>
+  
+
+</footer>
+</html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Cleppe Web Accessibility Project Coming Soon!</title>
+    <title>Kevin Cleppe Web Accessibility Project</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
 <header class="text-black body-font  shadow-lg ml-4 mr-4 mt-2 rounded-md">
@@ -23,19 +23,39 @@
   </div>
 </header>
 
-<h1 class="title-font sm:text-4xl text-3xl font-medium text-gray-900 items-center justify-center flex-col container mx-auto flex pt-24">Pardon Our Dust, Site Under Construction
+<h1 class="title-font sm:text-4xl text-3xl font-medium text-gray-900 items-center justify-center flex-col container mx-auto flex pt-24">Web Accessibility Project Write Up
 </h1>
       
    <main>
     <body >
         <section class="text-gray-900 body-font ">
             <div class="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
-              <img class="max-w-md object-cover object-center rounded" src="https://tailwindsite.blob.core.windows.net/public/122-1220259_transparent-remodeling-clipart-pardon-our-dust-renovations-in-300x221.png" alt="Kevin Cleppe (bald) holding Cookie, a Shih Tzu dog">
               <div class="text-center lg:w-2/3 w-full">
                 
-                <p class=" flex justify-center text-left">Page under construction, check back later please  : )</p>
-                <div class="flex justify-center">          
+                <p class=" flex justify-center text-left"> So this page is kind of meant to organize my own thoughts on how I made this site from start to finish. I found myself watching tutorial after tutorial on basic HTML, CSS, JavaScript, React, shadCDN, NodeJS, and a million other silly names that sound made up. I didn't want to just keep watching videos though or taking Udacity courses. I wanted to make something! So I made this site, learned from my shortcomings, and made this site.   </p>
+                <p class=" flex justify-center text-left py-5"> 
+                For my "tech stack, I use VSCode, push to my Github Repo, and then that repo syncs with an Azure static Web App. I'm also using TailWind, more specifically TailBlocks, to build the majority of the site. In short, write the code in VSCode, test in a local server (to make sure it makes sense and also to run my accessibility stuff against it), then push to the repo, which syncs with the static web app. In short, I would:</p>
+                <ol class="list-decimal pl-5 text-left">
+                  <li>Write the code in VSCode</li>
+                  <li>Push to my Github repo</li>
+                  <li>The Github repo automatically syncs with my Azure static web app.</li>
+                </ol>
+                
+                <p class=" flex justify-center text-left py-5"> 
+                  This was a great way to get started, but as you can imagine there were some issues. To start, the TailBlocks code was not very accessible. Running WAVE, ANDI, Axe, or any other tool revealed a ton of short comings. Some where easy to fix, others were a bit trickier (which makes for great practice!). I have a couple of pics of what a default page looks like below:
+</p>
+<img class="object-cover object-center rounded" alt="What a default Tailblocks page looks like. Bad color contrast, no errors or alerts, but still lots of issue to fix." src="https://tailwindsite.blob.core.windows.net/public/defaulttailblockspage.png">
+                <div class="flex justify-center">  
+                  <p class=" flex justify-center text-left py-5"> 
+                So the initial page that you can make with Tailblocks is has no accessibilly errors according to WAVE. Which is great! But this is also a great example on WHY we do manual evaluations as well. Some of the things that WAVE (and some other tools) missed include:
+  </p>
+  
                 </div>
+                <ol class="list-decimal pl-5 text-left">
+                  <li>Hover Focus</li>
+                  <li>Skipped links</li>
+                  <li>Tab order</li>
+                </ol>
               </div>
             </div>
           </section>

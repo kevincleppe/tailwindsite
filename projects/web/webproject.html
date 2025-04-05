@@ -34,7 +34,7 @@
                 
                 <p class=" flex justify-center text-left"> So this page is kind of meant to organize my own thoughts on how I made this site from start to finish. I found myself watching tutorial after tutorial on basic HTML, CSS, JavaScript, React, shadCDN, NodeJS, and a million other silly names that sound made up. I didn't want to just keep watching videos though or taking Udacity courses. I wanted to make something! So I made this site, learned from my shortcomings, and made this site.   </p>
                 <p class=" flex justify-center text-left py-5"> 
-                For my "tech stack, I use VSCode, push to my Github Repo, and then that repo syncs with an Azure static Web App. I'm also using TailWind, more specifically TailBlocks, to build the majority of the site. In short, write the code in VSCode, test in a local server (to make sure it makes sense and also to run my accessibility stuff against it), then push to the repo, which syncs with the static web app. In short, I would:</p>
+                For my "tech stack, I use VSCode, push to my Github Repo, and then that repo syncs with an Azure static Web App. I'm also using TailWind, more specifically Tailblocks, to build the majority of the site. In short, write the code in VSCode, test in a local server (to make sure it makes sense and also to run my accessibility stuff against it), then push to the repo, which syncs with the static web app. In short, I would:</p>
                 <ol class="list-decimal pl-5 text-left">
                   <li>Write the code in VSCode</li>
                   <li>Push to my Github repo</li>
@@ -42,9 +42,17 @@
                 </ol>
                 
                 <p class=" flex justify-center text-left py-5"> 
-                  This was a great way to get started, but as you can imagine there were some issues. To start, the TailBlocks code was not very accessible. Running WAVE, ANDI, Axe, or any other tool revealed a ton of short comings. Some where easy to fix, others were a bit trickier (which makes for great practice!). I have a couple of pics of what a default page looks like below:
+                  This was a great way to get started, but as you can imagine there were some issues. To start, the Tailblocks code was not very accessible. Running WAVE, ANDI, Axe, or any other tool revealed a ton of short comings. Some where easy to fix, others were a bit trickier (which makes for great practice!). I have a couple of pics of what a default page looks like below:
 </p>
+
+<img class="object-cover object-center rounded " alt="What a default Tailblocks page looks like. Bad color contrast, no errors or alerts, but still lots of issue to fix." src="https://tailwindsite.blob.core.windows.net/public/defaulttailwind.png">
+<i class="flex justify-center pb-5">"Boring, generic, but an actual site!"</i>
+
+
 <img class="object-cover object-center rounded" alt="What a default Tailblocks page looks like. Bad color contrast, no errors or alerts, but still lots of issue to fix." src="https://tailwindsite.blob.core.windows.net/public/defaulttailblockspage.png">
+<i class="flex justify-center pb-5">"The same site, but now tested with WAVE."</i>
+
+
                 <div class="flex justify-center">  
                   <p class=" flex justify-center text-left py-5"> 
                 So the initial page that you can make with Tailblocks has no accessibilly errors according to WAVE. Which is great! But this is also a great example on WHY we do manual evaluations as well. Some of the things that WAVE (and some other tools) missed include:
@@ -58,9 +66,13 @@
                   <li>Skip link</li>
                 </ol>
 
-                <p class=" flex justify-center text-left">Some other things that it doesn't have are: accessibility statement (coming soon), form to let folks know about issues they run into (I need to learn more about how to make forms), consistent navigation (WCAG 3.2.3). None of this includes the stuff the automated tools can't check for either, such as double checking 200% magnification.
+                <p class=" justify-center text-left py-5">Some other things that it doesn't have are: accessibility statement (coming soon), form to let folks know about issues they run into (I need to learn more about how to make forms), consistent navigation (WCAG 3.2.3), double checking 200% magnification, using Ems instead of Pxs for font size <a href="https://www.youtube.com/watch?v=xCSw6bPXZks&list=PL1PhyqLYrsRtdWqvAug49NmyDVbDrX_rE&index=24"> (Shout out Coder Coder for this video explaining the differences).</a> There many more things that would need to be fixed up, and probably even more things I haven't even spotted.
                      </p>
-        
+                     
+     
+      <p class=" justify-center text-left py-5">
+      So let's take care of the easiest but most impactful things first. For me this was changing the color contrast in the CSS file, particularly for links and P tags. The default classes for text in TailBlocks are for some reason grey, a very light version of grey. I removed that so it is #ffffff hex color (black) on a white background. Much more accessible! But now we need to make the links stand out. The color contrast for links was also terrible, and I wanted to make them a bit easier to spot. I hopped into the CSS file, made the color darker and bolder, and I put an underline to make links easier to spot. I also put an effect on hover for links though, that removes the underline, and also change the color of th link. Making the links east to find is one thing, but actually making it so users KNOW they can be clicked on and interacted with is another. Adding an underline, and a hover focus effect made the links for all the pages now much easier to spot.
+      </p>
           </section>
     </body>
    </main>   

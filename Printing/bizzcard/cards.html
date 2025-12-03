@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Cleppe Coming Card Project Coming Soon!</title>
+    <title>Kevin Cleppe Coming Card Project</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
 <header class="text-black body-font  shadow-lg ml-4 mr-4 mt-2 rounded-md">
@@ -23,19 +23,37 @@
   </div>
 </header>
 
-<h1 class="title-font sm:text-4xl text-3xl font-medium text-gray-900 items-center justify-center flex-col container mx-auto flex pt-24">Pardon Our Dust, Site Under Construction
+<h1 class="title-font sm:text-4xl text-3xl font-medium text-gray-900 items-center justify-center flex-col container mx-auto flex pt-24">3D Printed Business Cards
 </h1>
       
    <main>
     <body >
         <section class="text-gray-900 body-font ">
             <div class="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
-              <img class="max-w-md object-cover object-center rounded" src="https://tailwindsite.blob.core.windows.net/public/122-1220259_transparent-remodeling-clipart-pardon-our-dust-renovations-in-300x221.png" alt="Kevin Cleppe (bald) holding Cookie, a Shih Tzu dog">
-              <div class="text-center lg:w-2/3 w-full">
-                
-                <p class=" flex justify-center text-left">Page under construction, check back later please  : )</p>
-                <div class="flex justify-center">          
-                </div>
+              <p class="leading-relaxed text-left py-5"> 
+              This will be a short write up. The shape of the card is enough enough, and all major parts of it can be made in TinkerCad. Below I have a zoomed out screen shot of all the major versions of the card I made. </p>
+              
+             <img class="object-cover object-center rounded" alt="The WildSong coyote statue. " src="https://tailwindsite.blob.core.windows.net/public/cardversion.png">
+
+             <p class="leading-relaxed text-left py-5"> 
+              I also have a close up shot of the main card I'll be going over, that has my name, title, a small paw icon, and the QR code. </p>
+
+              <img class="object-cover object-center rounded" alt="Close up of main Business card" src="https://tailwindsite.blob.core.windows.net/public/maincard.png">
+              <p class="leading-relaxed text-left py-5"> 
+              The card is just a squished and extruded cube, some text, and that's it. The QR code and the paw symbol were both SVG symbols, which can be easily imported into your preferred 3D modeling platform and converted into a full model. However, if you only have a PNG, you can convert it to an SVG file using InkScape. I have a video linked below that goes into it in better detail than I could. </p>
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/peJcuRImCmY?si=AqtlIb2Q-UjNWgdb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+              <p class="leading-relaxed text-left py-5"> 
+              Now that you have STL made with the appropriate items, open it up in the slicer porgram of your choice (I use Cura), and look for the Extension, Post Processing, Modify G Code option:</p>
+              <img class="object-cover object-center rounded" alt="Close up of main Business card" src="https://tailwindsite.blob.core.windows.net/public/postprocess.png">
+              <p class="leading-relaxed text-left py-5"> 
+             The reason why we are looking for this option is that we want to make a filament swap when the base layer ends and the actual details of the card start. I unfortunately don't have one of those  printers that does the swap for you, so we have to do this manually (both for the code and for the physical filament swap). For this card, the base layer goes up to layer 3, and the details start on layer 4, so we want to make a "Pause  At Height" change at layer 3. Then, we can switch out the filaments and give the card some color contrast. </p>
+             <img class="object-cover object-center rounded py-5" alt="Close up of main Business card" src="https://tailwindsite.blob.core.windows.net/public/first layer.png">
+             <img class="object-cover object-center rounded py-5" alt="Close up of main Business card" src="https://tailwindsite.blob.core.windows.net/public/layerheight3.png">
+
+             <p class="leading-relaxed text-left py-5"> 
+             Next and final step is to upload the GCODE to the printer, and you are good to go! Because the prints are so small, they usually finish in about 30ish minutes. </p>
               </div>
             </div>
           </section>

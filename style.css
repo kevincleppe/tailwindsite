@@ -78,14 +78,16 @@ pre {
  */
 
 a {
+  color: rgb(31, 27, 243);
 }
 
 a:link{
   text-decoration: underline;
+  color:rgb(31, 27, 243);
   
 }
 a:hover{
-  color: #341539;
+  color: rgba(91, 88, 235, 0.808);
   text-decoration: none;
 }
 

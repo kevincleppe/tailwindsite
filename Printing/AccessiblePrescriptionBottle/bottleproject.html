@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Cleppe Coming Accessible Prescrption bottle Project Coming Soon!</title>
+    <title>Accessible Prescription Bottle</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
 <header class="text-black body-font  shadow-lg ml-4 mr-4 mt-2 rounded-md">
@@ -18,29 +18,85 @@
     </a>
     <nav class="hidden sm:mr-auto sm:ml-4 sm:py-1 sm:pl-4 sm:border-l sm:border-gray-400 sm:flex sm:flex-wrap sm:items-center sm:text-base sm:justify-center">
       
-      <a class="mr-5 transform motion-reduce:transform-none " href="../../resume/resume.html">Resume</a>
+      <a class="mr-5 transform motion-reduce:transform-none hover:underline " href="../../resume/resume.html">Resume</a>
     </nav>
   </div>
 </header>
 
-<h1 class="title-font sm:text-4xl text-3xl font-medium text-gray-900 items-center justify-center flex-col container mx-auto flex pt-24">Pardon Our Dust, Site Under Construction
+<h1 class="title-font sm:text-4xl text-3xl font-medium text-gray-900 items-center justify-center flex-col container mx-auto flex pt-24">Accessible Prescription Bottle Project
 </h1>
       
    <main>
     <body >
-        <section class="text-gray-900 body-font ">
-            <div class="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
-              <img class="max-w-md object-cover object-center rounded" src="https://tailwindsite.blob.core.windows.net/public/122-1220259_transparent-remodeling-clipart-pardon-our-dust-renovations-in-300x221.png" alt="Kevin Cleppe (bald) holding Cookie, a Shih Tzu dog">
-              <div class="text-center lg:w-2/3 w-full">
-                
-                <p class=" flex justify-center text-left">Page under construction, check back later please  : )</p>
-                <div class="flex justify-center">          
-                </div>
-              </div>
-            </div>
-          </section>
+      <section class="text-gray-900 body-font ">
+        <div class="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
+    
+          <div class="text-center lg:w-2/3 w-full">
+            <p class="leading-relaxed text-left py-5"> 
+              A law passed in California, <a href="https://calmatters.digitaldemocracy.org/bills/ca_202320240ab1902"> AB 1902</a>, that requires pharmacies to be ready to provide accessible prescription labels for individuals with disabilities. For folks who are low vision or fully blind, that means means making it so that they know what their medications are at no additional cost. This is great for independance, but does raise the question of how do you actually make this happen?</p>
+            
+            <img class="object-cover object-center rounded" alt="PETG pill bottle cover with speaker embeded on the inside " src="https://tailwindsite.blob.core.windows.net/public/IMG_4118.jpeg">
 
-    </body>
+            <p class="leading-relaxed text-left py-5"> 
+              There are already some off the shelf options already actually, but they are....pricey. Like, the price isn't even listed on the site pricey. And that's before you get to to the yearly subscription, refill for parts and components, and so on. All of this is still at no cost for the patient, but that doesn't change things for the pharmacy.
+                </p>   
+  
+        <p class="leading-relaxed text-left py-5"> 
+         One option involves printing and place an RFID chip that is stuck to the bottom of the bottle. The user can use either a scanner that is given to them by the pharmacist to read the information to them, or use an app that reads the information as well.</p>   
+          <img class="object-cover object-center rounded" alt="Pill bottle with embedded RFID chip, havings it's label being read aloud " src="https://tailwindsite.blob.core.windows.net/public/patient-using-st-at-home.jpg">
+          <p class="leading-relaxed text-left py-5"> 
+           An option like this though involves the printer that makes the RFID chip, a yearly subcription, and a TON of set up. The documentation for it was like 90 pages of jsut setting up the printer. If you wanted to replicate this, but not spend a ton of money and time setting everything up, how could you do it?
+          </p> 
+    
+          <p class="leading-relaxed text-left py-5"> 
+         First thing's first, we have to determine what we actually need to do. The solution a lot of these companies have is letting the patient have the prescription label be read aloud to them. The information is stored on the RFID chip, and the chip can be read by the reader. So we need to be able to store the information somewhere, and have it be ready to be read aloud to the patient.
+          </p> 
+
+          <p class="leading-relaxed text-left py-5"> 
+          One idea I pitched was putting a QR code on the bottle. The patient could scan it with their phone and have the information read aloud. We ruled it out right away for two reasons. First, it assumes the patient has a smartphone and knows how to use QR codes. Second, the code would have to link to a public web page with the patient’s information. Anyone could find that page by accident, or by crawling for it on purpose, and learn about the patient’s medical needs.
+          </p>
+          <p class="leading-relaxed text-left py-5"> 
+         So we need to store the information somewhere, and have it be read aloud to the patient. The pharmacist proposed the idea of a small microcontroller, a speaker, and a button. The microcontroller would store the information, and when the button is pressed, it would read the information aloud through the speaker. This way, the patient doesn't need a smartphone or any other device, and their information is kept private.
+          </p>
+      
+          <p class="leading-relaxed text-left py-5"> 
+            That's a great idea! Here's the issue though...I didn't know how to do any of that. 😓 I soldered once in a workshop, but that was just putting an LED on a PCB and making it light up when completing a circuit. There a massive chasm between that and making something that requires battery power, storing information, and a speaker system. Even if I COULD do all that, is it safe? Is it scalable? Is it reliable? Rather than trying to make all of that, surely there's something out there we can buy that does all of that already, right?
+          </p>
+           <img class="object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/buildabear.jpg">
+           <p class="leading-relaxed text-left py-5"> 
+           Turns out there is! The answer comes from build a bear. Not only are they cute, but the speakers in the bear have all the required pieces needed; they have power that lasts a long time, you can put up tp 16 minutes of audio, you can plau the audio with the press of a button, they are strong and resillient, and you can buy the speakers from amazon for $17 for a pack of 4.
+          </p>
+  <img class="object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/speaker 1.png">
+    <img class="py-5 object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/Screenshot 2026-10-10 135128.png">
+           <p class="leading-relaxed text-left py-5"> 
+           So we have the speakers, they meet all of our requirements, now we just need to figure out how to get the audio onto them. We thought of the pharmacist just recording the audio themselves, but that seemed unprofessional, and could lead to pateints being confused if there was a drastic change in he voices between prescriptions. How do we get clear audio that's consistent onto the device? Our answer was Azure Speech Studio.   
+          </p>
+           <p class="leading-relaxed text-left py-5"> 
+           So we have the speakers, they meet all of our requirements, now we just need to figure out how to get the audio onto them. We thought of the pharmacist just recording the audio themselves, but that seemed unprofessional, and could lead to pateints being confused if there was a drastic change in he voices between prescriptions. How do we get clear audio that's consistent onto the device? Our answer was Azure Speech Studio.   
+          </p>
+          <img class="py-5 object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/azure speech studio.png">
+           <p class="leading-relaxed text-left py-5"> 
+          I originally played around with this when I was trying to copy Dale Markowitz's <a href="https://www.youtube.com/watch?v=q-nvbuc59Po">PDF to Speech Project</a> but trying to replicate it with Microsoft products (I ended up being able to get the individual steps to work, but not the whole process. Turns out engineers from Google are very smart and hard to repliclate. Who could have guessed). One of the cool services that are available on it is converting text to speech. And the voices are really good! And there's a lot of them! If you are a college campus, you also 100% have some sort of contract with Microsoft that gives you access to Azure, and activating Azure speech studio would require maybe 1 or 2 conversations with your IT team. And you are only charged by the use, and the first 6 million characters are free, so I don't preduict ever incurring any real cost with this platform.    
+          </p>
+           <img class="py-5 object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/speech studio UI example.png">
+            <p class="leading-relaxed text-left py-5"> 
+          The work flow is fairly easy. You put your text into the center, pick a voice on the right, click save, and then export eith to your Audio Files Section, or download it. Below I have a the audop that was initially generated when we were testing this (I have no idea what the prescription was for, this was just the first thing the pharmacist thought of):
+          </p>
+          <audio controls class="w-full h-10 accent-indigo-600 rounded-lg">
+    <source src="https://tailwindsite.blob.core.windows.net/public/Fake RX Number 123456.mp3" type="audio/mpeg">
+  </audio>
+<p class="leading-relaxed text-left py-5"> 
+          So we have the speaker,with a long lasting battery and sturdy design taken care of, we have a way to generate the audio in a consistent, clear way, now we just have to put it onto the speaker. You just need to make sure you have the right cable (micro USB), plug it into the computer in question, download the MP3, and put it  onto the speaker.
+          </p>
+          <video class="w-full aspect-video rounded-xl shadow-lg" controls>
+  <source src="https://tailwindsite.blob.core.windows.net/public/Speaker Test.MOV" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p class="leading-relaxed text-left py-5"> 
+          Now the fun question: How do we actually get this speaker to be combined with the prescription bottle?
+          </p>
+</section>
+         </body>
    </main>   
 
 <footer class="text-gray-700 body-font">
@@ -52,7 +108,7 @@
       <span class="ml-3 text-xl">kevincleppe.com</span>
     </a>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start" >
-      <a class="text-gray-900  visually-hidden" href="https://www.facebook.com/cleppekevin" >
+      <a class="text-gray-900 hover:underline visually-hidden" href="https://www.facebook.com/cleppekevin" >
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
           <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
         </svg>
@@ -71,7 +127,7 @@
         </svg>
         <span class="sr-only"> Kevin Cleppe Instagram link</span>
       </a>
-      <a class="ml-3 text-gray-900" href="https://www.linkedin.com/in/kevincleppe/">
+      <a class="ml-3 text-gray-900 hover:" href="https://www.linkedin.com/in/kevincleppe/">
         <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"  >
           <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" ></path>
           <circle cx="4" cy="4" r="2" stroke="none"></circle>
@@ -80,9 +136,6 @@
       </a>
       
     </span>
-    
   </div>
-  
-
 </footer>
 </html>

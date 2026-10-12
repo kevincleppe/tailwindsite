@@ -33,7 +33,7 @@
     
           <div class="text-center lg:w-2/3 w-full">
             <p class="leading-relaxed text-left py-5"> 
-              A law passed in California, <a href="https://calmatters.digitaldemocracy.org/bills/ca_202320240ab1902"> AB 1902</a>, that requires pharmacies to be ready to provide accessible prescription labels for individuals with disabilities. For folks who are low vision or fully blind, that means means making it so that they know what their medications are at no additional cost. This is great for independance, but does raise the question of how do you actually make this happen?</p>
+              A law passed in California, <a href="https://calmatters.digitaldemocracy.org/bills/ca_202320240ab1902"> AB 1902</a>, that requires pharmacies to provide accessible prescription labels for individuals with disabilities. For folks who are low vision or fully blind, that means making it so that they know what their medications are at no additional cost. This is great for independance, but does raise the question of how do you actually make this happen?</p>
             
             <img class="object-cover object-center rounded" alt="PETG pill bottle cover with speaker embeded on the inside " src="https://tailwindsite.blob.core.windows.net/public/IMG_4118.jpeg">
 
@@ -45,7 +45,7 @@
          One option involves printing and place an RFID chip that is stuck to the bottom of the bottle. The user can use either a scanner that is given to them by the pharmacist to read the information to them, or use an app that reads the information as well.</p>   
           <img class="object-cover object-center rounded" alt="Pill bottle with embedded RFID chip, havings it's label being read aloud " src="https://tailwindsite.blob.core.windows.net/public/patient-using-st-at-home.jpg">
           <p class="leading-relaxed text-left py-5"> 
-           An option like this though involves the printer that makes the RFID chip, a yearly subcription, and a TON of set up. The documentation for it was like 90 pages of jsut setting up the printer. If you wanted to replicate this, but not spend a ton of money and time setting everything up, how could you do it?
+           An option like this though involves the printer that makes the RFID chip, a yearly subcription, and a TON of set up. The documentation for it was like 90 pages of just setting up the printer. If you wanted to replicate this, but not spend a ton of money and time setting everything up, how could you do it?
           </p> 
     
           <p class="leading-relaxed text-left py-5"> 
@@ -53,7 +53,7 @@
           </p> 
 
           <p class="leading-relaxed text-left py-5"> 
-          One idea I pitched was putting a QR code on the bottle. The patient could scan it with their phone and have the information read aloud. We ruled it out right away for two reasons. First, it assumes the patient has a smartphone and knows how to use QR codes. Second, the code would have to link to a public web page with the patient’s information. Anyone could find that page by accident, or by crawling for it on purpose, and learn about the patient’s medical needs.
+          One idea I pitched to do this was putting a QR code on the bottle. The patient could scan it with their phone and have the information read aloud by a screen reader on their phone. We ruled it out right away for two reasons. First, it assumes the patient has a smartphone and knows how to use QR codes. Second, the QR code would have to link to a public web page with the patient’s information. Anyone could find that page by accident, or by crawling for it on purpose, and learn about the patient’s medical needs.
           </p>
           <p class="leading-relaxed text-left py-5"> 
          So we need to store the information somewhere, and have it be read aloud to the patient. The pharmacist proposed the idea of a small microcontroller, a speaker, and a button. The microcontroller would store the information, and when the button is pressed, it would read the information aloud through the speaker. This way, the patient doesn't need a smartphone or any other device, and their information is kept private.
@@ -64,23 +64,21 @@
           </p>
            <img class="object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/buildabear.jpg">
            <p class="leading-relaxed text-left py-5"> 
-           Turns out there is! The answer comes from build a bear. Not only are they cute, but the speakers in the bear have all the required pieces needed; they have power that lasts a long time, you can put up tp 16 minutes of audio, you can plau the audio with the press of a button, they are strong and resillient, and you can buy the speakers from amazon for $17 for a pack of 4.
+           Turns out there is! The answer comes from build a bear. Not only are they cute, but the speakers in the bear have all the required pieces needed; they have power that lasts a long time, you can put up up 16 minutes of audio, you can play the audio with the press of a button, they are strong and resillient, and you can buy the speakers from amazon for $17 for a pack of 4.
           </p>
   <img class="object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/speaker 1.png">
     <img class="py-5 object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/Screenshot 2026-10-10 135128.png">
            <p class="leading-relaxed text-left py-5"> 
            So we have the speakers, they meet all of our requirements, now we just need to figure out how to get the audio onto them. We thought of the pharmacist just recording the audio themselves, but that seemed unprofessional, and could lead to pateints being confused if there was a drastic change in he voices between prescriptions. How do we get clear audio that's consistent onto the device? Our answer was Azure Speech Studio.   
           </p>
-           <p class="leading-relaxed text-left py-5"> 
-           So we have the speakers, they meet all of our requirements, now we just need to figure out how to get the audio onto them. We thought of the pharmacist just recording the audio themselves, but that seemed unprofessional, and could lead to pateints being confused if there was a drastic change in he voices between prescriptions. How do we get clear audio that's consistent onto the device? Our answer was Azure Speech Studio.   
-          </p>
+          
           <img class="py-5 object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/azure speech studio.png">
            <p class="leading-relaxed text-left py-5"> 
-          I originally played around with this when I was trying to copy Dale Markowitz's <a href="https://www.youtube.com/watch?v=q-nvbuc59Po">PDF to Speech Project</a> but trying to replicate it with Microsoft products (I ended up being able to get the individual steps to work, but not the whole process. Turns out engineers from Google are very smart and hard to repliclate. Who could have guessed). One of the cool services that are available on it is converting text to speech. And the voices are really good! And there's a lot of them! If you are a college campus, you also 100% have some sort of contract with Microsoft that gives you access to Azure, and activating Azure speech studio would require maybe 1 or 2 conversations with your IT team. And you are only charged by the use, and the first 6 million characters are free, so I don't preduict ever incurring any real cost with this platform.    
+          I originally played around with this when I was trying to copy Dale Markowitz's <a href="https://www.youtube.com/watch?v=q-nvbuc59Po">PDF to Speech Project</a> but trying to replicate it with Microsoft products (I ended up being able to get the individual steps to work, but not the whole process. Turns out engineers from Google are very smart and hard to repliclate. Who could have guessed). One of the cool services that are available on it is converting text to speech. And the voices are really good! And there's a lot of them! If you are a college campus, you also 100% have some sort of contract with Microsoft that gives you access to Azure, and activating Azure speech studio would require maybe 1 or 2 conversations with your IT team. And you are only charged by the use, and the first 6 million characters are free, so I don't predict ever incurring any real cost with this platform.    
           </p>
            <img class="py-5 object-cover object-center rounded" alt="A build a bear, from Build Bear " src="https://tailwindsite.blob.core.windows.net/public/speech studio UI example.png">
             <p class="leading-relaxed text-left py-5"> 
-          The work flow is fairly easy. You put your text into the center, pick a voice on the right, click save, and then export eith to your Audio Files Section, or download it. Below I have a the audop that was initially generated when we were testing this (I have no idea what the prescription was for, this was just the first thing the pharmacist thought of):
+          The work flow is fairly easy. You put your text into the center, pick a voice on the right, click save, and then export eith to your Audio Files Section, or download it. Below I have the audio that was initially generated when we were testing this (I have no idea what the prescription was for, this was just the first thing the pharmacist thought of):
           </p>
           <audio controls class="w-full h-10 accent-indigo-600 rounded-lg">
     <source src="https://tailwindsite.blob.core.windows.net/public/Fake RX Number 123456.mp3" type="audio/mpeg">
